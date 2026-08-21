@@ -15,7 +15,7 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
     background-color: #1f1e1f;
-    scroll-behavior: smooth; /* Habilita a rolagem suave */
+    scroll-behavior: smooth;
       
 }
 
@@ -73,7 +73,6 @@ html{
     color: #ffc506;
 }
 
-/*first-section*/
 
 .first-section{
     height: 100vh;
@@ -196,9 +195,9 @@ html{
 }
 
 .itens-cardapio {
-    display: grid; /* Ativa o grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cria colunas flexíveis */
-    gap: 20px; /* Espaçamento entre as imagens */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
   }
   
   .itens-cardapio div {
@@ -206,10 +205,10 @@ html{
   }
   
   .itens-cardapio img {
-    width: 100%; /* Ajusta a largura da imagem para ocupar o container */
-    max-width: 200px; /* Define um tamanho máximo */
+    width: 100%; 
+    max-width: 200px; 
     height: auto;
-    margin-bottom: 10px; /* Espaço abaixo da imagem */
+    margin-bottom: 10px; 
   }
   
   
