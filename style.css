@@ -1,86 +1,241 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Removido o '/' inicial de style.css -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <title>Uni Pizzas</title>
-</head>
-<body>
-    <header class="content">
-        <div class="logo">
-            <!-- Corrigido o caminho da imagem do logo -->
-            <img src="IMG/logo.png" alt="Logo Uni Pizzas">
-            <h3>Uni Pizzas</h3>
-        </div>
-        <nav>
-            <ul class="list-menu">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#sobrenos">Sobre Nós</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#contatos">Contatos</a></li>
-                <li><a href="https://www.instagram.com/uni_pizzas/" target="_blank"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/people/Uni-Pizzas/61565500378466/" target="_blank"><i class="bi bi-facebook"></i></a></li>
-                <li><a href="#"><i class="bi bi-cart2"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="first-section" id="Home">
-        <div class="conteudo-pricipal">
-            <h1>Deixe seu dia mais saboroso!</h1>
-            <h2>As pizzas mais recheadas da região.</h2>
-            <div class="btn">
-                <a href="https://wa.me/5516988670759?text=Olá,%20gostaria%20de%20reservar%20uma%20pizza." target="_blank" class="Reservar">Reserve a sua!</a>
-            </div>
-        </div>
-    </section>
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
+}
 
-    <section class="sobre-nos" id="sobrenos">
-        <div class="main">
-            <div class="contentsobre">
-                <h2>Sobre Nós</h2>
-                <p>Somos um grupo de estudantes na Universidade de Franca, fazendo parte de um grande projeto onde nosso maior foco é vender pizzas. O nome UNI-PIZZAS foi escolhido com muito cuidado para refletir nossa missão e nossos valores. “UNI” representa a união das pessoas que compartilham a paixão por criar algo significativo e bem-sucedido. Acreditamos que, através da colaboração e do esforço conjunto, podemos alcançar grandes resultados. Nosso objetivo é oferecer pizzas pré-assadas de alta qualidade, que combinam praticidade com sabor excepcional.</p>
-            </div>
-            <div class="img-cozinha">
-                <!-- Corrigido o caminho da imagem da equipe -->
-                <img src="IMG/Quem somos nós.png" alt="Equipe Uni Pizzas">
-            </div>
-        </div>
-    </section>
+:root {
+    --primary: #ff4757; /* Cor vermelha para botões e detalhes */
+    --primary-hover: #e84118;
+    --dark: #2f3542;
+    --light: #f1f2f6;
+    --text-muted: #747d8c;
+}
 
-    <section class="cardapio" id="cardapio">
-        <h2>Cardápio</h2>
-        <div class="itens-cardapio">
-            <!-- Item 1: Frango -->
-            <div class="card-item">
-                <img src="IMG/frango.png" alt="Frango com Catupiry">
-                <div class="info">
-                    <h3>Frango com Catupiry</h3>
-                    <h4>8 fatias <span>R$ 35,00</span></h4>
-                    <a href="https://wa.me/5516988670759?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Frango%20com%20Catupiry" target="_blank" class="Pedir">Pedir Agora</a>
-                </div>
-            </div>
+body {
+    background-color: #ffffff;
+    color: var(--dark);
+    line-height: 1.6;
+}
 
-            <!-- Item 2: Calabresa -->
-            <div class="card-item">
-                <img src="IMG/calabresa.png" alt="Calabresa">
-                <div class="info">
-                    <h3>Calabresa</h3>
-                    <h4>8 fatias <span>R$ 35,00</span></h4>
-                    <a href="https://wa.me/5516988670759?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Calabresa" target="_blank" class="Pedir">Pedir Agora</a>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Cabeçalho e Menu */
+header.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <footer>
-        <h4>Desenvolvido por <span>Alice Vitoria</span></h4>
-    </footer>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo h3 {
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 1.4rem;
+}
+
+.list-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.list-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.list-menu a:hover {
+    color: var(--primary);
+}
+
+.list-menu i {
+    font-size: 1.2rem;
+}
+
+/* Seção Hero (Fundo) */
+.first-section {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('IMG/fundopizza.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.conteudo-pricipal h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.conteudo-pricipal h2 {
+    color: #f1f2f6;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.Reservar {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.Reservar:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+/* Sobre Nós */
+.sobre-nos {
+    padding: 80px 8%;
+}
+
+.sobre-nos .main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Responsividade */
+}
+
+.contentsobre {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contentsobre h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.contentsobre p {
+    color: var(--text-muted);
+}
+
+.img-cozinha {
+    flex: 1;
+    min-width: 300px;
+}
+
+.img-cozinha img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Cardápio */
+.cardapio {
+    padding: 80px 8%;
+    background-color: #fcfcfc;
+}
+
+.cardapio h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.itens-cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-item {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-item .info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-item h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.card-item h4 {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.card-item h4 span {
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.Pedir {
+    background-color: var(--dark);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.Pedir:hover {
+    background-color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer span {
+    color: var(--primary);
+    font-weight: 600;
+}
