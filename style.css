@@ -1,58 +1,86 @@
-/* Ajustes do Logo no Header */
-.logo img {
-    height: 45px;
-    width: auto;
-    display: block;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Removido o '/' inicial de style.css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Uni Pizzas</title>
+</head>
+<body>
+    <header class="content">
+        <div class="logo">
+            <!-- Corrigido o caminho da imagem do logo -->
+            <img src="IMG/logo.png" alt="Logo Uni Pizzas">
+            <h3>Uni Pizzas</h3>
+        </div>
+        <nav>
+            <ul class="list-menu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#sobrenos">Sobre Nós</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="https://www.instagram.com/uni_pizzas/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/people/Uni-Pizzas/61565500378466/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-cart2"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="first-section" id="Home">
+        <div class="conteudo-pricipal">
+            <h1>Deixe seu dia mais saboroso!</h1>
+            <h2>As pizzas mais recheadas da região.</h2>
+            <div class="btn">
+                <a href="https://wa.me/5516988670759?text=Olá,%20gostaria%20de%20reservar%20uma%20pizza." target="_blank" class="Reservar">Reserve a sua!</a>
+            </div>
+        </div>
+    </section>
 
-/* Fundo da Hero usando sua imagem */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('IMG/fundopizza.jpg') center/cover no-repeat;
-}
+    <section class="sobre-nos" id="sobrenos">
+        <div class="main">
+            <div class="contentsobre">
+                <h2>Sobre Nós</h2>
+                <p>Somos um grupo de estudantes na Universidade de Franca, fazendo parte de um grande projeto onde nosso maior foco é vender pizzas. O nome UNI-PIZZAS foi escolhido com muito cuidado para refletir nossa missão e nossos valores. “UNI” representa a união das pessoas que compartilham a paixão por criar algo significativo e bem-sucedido. Acreditamos que, através da colaboração e do esforço conjunto, podemos alcançar grandes resultados. Nosso objetivo é oferecer pizzas pré-assadas de alta qualidade, que combinam praticidade com sabor excepcional.</p>
+            </div>
+            <div class="img-cozinha">
+                <!-- Corrigido o caminho da imagem da equipe -->
+                <img src="IMG/Quem somos nós.png" alt="Equipe Uni Pizzas">
+            </div>
+        </div>
+    </section>
 
-/* Ajustes das fotos dos produtos */
-.card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+    <section class="cardapio" id="cardapio">
+        <h2>Cardápio</h2>
+        <div class="itens-cardapio">
+            <!-- Item 1: Frango -->
+            <div class="card-item">
+                <img src="IMG/frango.png" alt="Frango com Catupiry">
+                <div class="info">
+                    <h3>Frango com Catupiry</h3>
+                    <h4>8 fatias <span>R$ 35,00</span></h4>
+                    <a href="https://wa.me/5516988670759?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Frango%20com%20Catupiry" target="_blank" class="Pedir">Pedir Agora</a>
+                </div>
+            </div>
 
-/* Seção Quem Somos */
-.about-section {
-    padding: 4rem 8%;
-    background-color: #ffffff;
-}
+            <!-- Item 2: Calabresa -->
+            <div class="card-item">
+                <img src="IMG/calabresa.png" alt="Calabresa">
+                <div class="info">
+                    <h3>Calabresa</h3>
+                    <h4>8 fatias <span>R$ 35,00</span></h4>
+                    <a href="https://wa.me/5516988670759?text=Olá,%20gostaria%20de%20pedir%20uma%20pizza%20de%20Calabresa" target="_blank" class="Pedir">Pedir Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
+    <footer>
+        <h4>Desenvolvido por <span>Alice Vitoria</span></h4>
+    </footer>
 
-.about-img {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-img img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.about-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-text h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: var(--dark);
-}
-
-.about-text p {
-    color: var(--gray);
-    line-height: 1.6;
-}
+    <script src="script.js"></script>
+</body>
+</html>
